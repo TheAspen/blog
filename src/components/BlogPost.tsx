@@ -1,18 +1,8 @@
 import React from "react";
-import { Heading, Text, Box, Paragraph } from "grommet";
+import { Text } from "grommet";
 
-interface Props {
-  header: string;
-  content: string;
-}
-
-const BlogPost = ({ content, header }: Props): JSX.Element => {
-  return (
-    <Box round>
-      <Heading>{header}</Heading>
-      <Paragraph>{content}</Paragraph>
-    </Box>
-  );
+const Footer: React.FC = () => {
+  return <Text>Blogpost</Text>;
 };
 
-export default BlogPost;
+export default Footer;

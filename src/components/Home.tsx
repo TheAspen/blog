@@ -1,8 +1,9 @@
 import React from "react";
 import Header from "./Header";
-import { Grommet, Page, PageContent, Heading, Paragraph } from "grommet";
+import { Grommet, Page, PageContent } from "grommet";
 import Footer from "./Footer";
 import Content from "./Content";
+import BlogPosts from "./BlogPosts";
 
 const customTheme = {};
 
@@ -12,7 +13,9 @@ const App: React.FC = () => {
       <Header />
       <Page style={{ height: "100vh" }} kind="narrow">
         <PageContent fill gap="small">
-          <Content />
+          <Content>
+            <BlogPosts />
+          </Content>
         </PageContent>
       </Page>
       <Footer />
