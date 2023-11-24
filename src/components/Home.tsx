@@ -3,7 +3,7 @@ import Header from "./Header";
 import { Grommet, Page, PageContent } from "grommet";
 import Footer from "./Footer";
 import Content from "./Content";
-import BlogPosts from "./BlogPosts";
+import NewBlogPosts from "./NewBlogPosts";
 
 const customTheme = {};
 
@@ -11,10 +11,14 @@ const App: React.FC = () => {
   return (
     <Grommet theme={customTheme}>
       <Header />
-      <Page style={{ height: "100vh" }} kind="narrow">
+      <Page
+        // style={{ height: "100vh" }}
+        // overflow={{ vertical: "scroll" }}
+        kind="narrow"
+      >
         <PageContent fill gap="small">
           <Content>
-            <BlogPosts />
+            <NewBlogPosts />
           </Content>
         </PageContent>
       </Page>

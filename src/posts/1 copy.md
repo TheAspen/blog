@@ -1,8 +1,8 @@
 ---
 title: This is a test
 stack: This is a stack
-slug: slug
-date: 2023-11-23
+date: 24.11.2023
+index: 1
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer

@@ -10,7 +10,7 @@ exports.createPages = async ({ graphql, actions }) => {
     allMarkdownRemark {
       nodes {
         frontmatter {
-          slug
+          index
           title
         }
         id
@@ -20,10 +20,10 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
   result.data.allMarkdownRemark.nodes.forEach(node => {
     createPage({
-      path: `/posts/${node.frontmatter.slug}`,
+      path: `/posts/${node.frontmatter.index}`,
       component: blogPostTemplate,
       context: {
-        slug: node.frontmatter.slug,
+        index: node.frontmatter.index,
       },
     })
   })

@@ -1,6 +1,6 @@
 import React from "react";
 import { navigate } from "gatsby";
-import { Button, Header as Gr_Header, Nav, Grommet } from "grommet";
+import { Button, Header as Gr_Header, Nav, Grommet, Text } from "grommet";
 
 const customTheme = {
   button: {
@@ -28,14 +28,16 @@ const customTheme = {
 
 const aboutPage = "/about/";
 const homePage = "/";
+const blogPage = "/posts/";
 
 const Header: React.FC = () => {
   return (
     <Grommet theme={customTheme}>
       <Gr_Header pad="small" sticky="scrollup">
-        <text>Gr_Header1</text>
+        <Text>Gr_Header1</Text>
         <Nav direction="row">
-          <Button secondary label="Blog" onClick={() => navigate(homePage)} />
+          <Button secondary label="Home" onClick={() => navigate(homePage)} />
+          <Button secondary label="Blog" onClick={() => navigate(blogPage)} />
           <Button secondary label="About" onClick={() => navigate(aboutPage)} />
         </Nav>
       </Gr_Header>
