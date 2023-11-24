@@ -1,7 +1,7 @@
 ---
 title: This is a test
 stack: This is a stack
-slug: Slug eli etana?
+slug: slug
 date: 2023-11-23
 ---
 
