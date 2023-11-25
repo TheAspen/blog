@@ -5,6 +5,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import Header from "./Header";
 import Content from "./Content";
 import Footer from "./Footer";
+import { mainTheme } from "../themes/themes";
 
 const BlogPosts: React.FC = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
@@ -14,6 +15,7 @@ const BlogPosts: React.FC = () => {
           frontmatter {
             index
             title
+            desc
           }
           id
         }
@@ -33,15 +35,15 @@ const BlogPosts: React.FC = () => {
     .reverse();
 
   return (
-    <Grommet>
+    <Grommet theme={mainTheme}>
       <Header />
-      <Page kind="narrow">
+      <Page background="main" kind="narrow">
         <PageContent fill gap="small">
           <Content>
             {posts.map(
               (post: {
                 id: React.Key | null | undefined;
-                frontmatter: { index: string; title: string };
+                frontmatter: { index: string; title: string; desc: string };
               }) => {
                 return (
                   <Box
@@ -50,7 +52,7 @@ const BlogPosts: React.FC = () => {
                   >
                     <BlogPostCard
                       index={post.frontmatter.index}
-                      content="Testi posti"
+                      content={post.frontmatter.desc}
                       header={post.frontmatter.title}
                     ></BlogPostCard>
                   </Box>

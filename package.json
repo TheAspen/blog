@@ -17,6 +17,8 @@
   },
   "dependencies": {
     "gatsby": "^5.12.4",
+    "gatsby-plugin-sharp": "^5.12.3",
+    "gatsby-remark-images": "^7.12.3",
     "gatsby-source-filesystem": "^5.12.1",
     "gatsby-transformer-remark": "^6.12.3",
     "grommet": "^2.34.1",

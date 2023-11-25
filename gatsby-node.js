@@ -11,9 +11,7 @@ exports.createPages = async ({ graphql, actions }) => {
       nodes {
         frontmatter {
           index
-          title
         }
-        id
       }
     }
   }

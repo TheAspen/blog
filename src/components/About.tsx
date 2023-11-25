@@ -3,14 +3,15 @@ import Header from "./Header";
 import { Grommet, Page, PageContent, Text } from "grommet";
 import Footer from "./Footer";
 import Content from "./Content";
+import { mainTheme } from "../themes/themes";
 
 const customTheme = {};
 
 const App: React.FC = () => {
   return (
-    <Grommet theme={customTheme}>
+    <Grommet theme={mainTheme}>
       <Header />
-      <Page style={{ height: "100vh" }} kind="narrow">
+      <Page background="main" style={{ height: "100vh" }} kind="narrow">
         <PageContent fill gap="small">
           <Content>
             <Text> JEE </Text>
