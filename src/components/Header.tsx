@@ -33,7 +33,11 @@ const blogPage = "/posts/";
 const Header: React.FC = () => {
   return (
     <Grommet theme={customTheme}>
-      <Gr_Header pad="small" sticky="scrollup">
+      <Gr_Header
+        border={{ color: "light-2", position: "bottom", size: "2px" }}
+        pad="small"
+        sticky="scrollup"
+      >
         <Text>Gr_Header1</Text>
         <Nav direction="row">
           <Button secondary label="Home" onClick={() => navigate(homePage)} />
