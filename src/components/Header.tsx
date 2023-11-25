@@ -34,8 +34,9 @@ const Header: React.FC = () => {
   return (
     <Grommet theme={customTheme}>
       <Gr_Header
-        border={{ color: "light-2", position: "bottom", size: "2px" }}
+        //border={{ color: "light-4", side: "bottom", size: "2px" }}
         pad="small"
+        background="#474b4F"
         sticky="scrollup"
       >
         <Text>Gr_Header1</Text>

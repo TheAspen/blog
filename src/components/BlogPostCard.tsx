@@ -11,7 +11,7 @@ interface Props {
 const BlogPostCard = ({ index, content, header }: Props): JSX.Element => {
   return (
     <Box
-      background="light-2"
+      background="#6B6E70"
       pad="small"
       round
       onClick={() => navigate("/posts/" + index)}

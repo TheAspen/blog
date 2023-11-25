@@ -5,18 +5,18 @@ import Footer from "./Footer";
 import Content from "./Content";
 import NewBlogPosts from "./NewBlogPosts";
 
-const customTheme = {};
-
 const App: React.FC = () => {
   return (
-    <Grommet>
+    <Grommet
+      theme={{
+        global: {
+          colors: { doc: "linear-gradient(#474b4F,#222629)" },
+        },
+      }}
+    >
       <Header />
-      <Page
-        // style={{ height: "100vh" }}
-        // overflow={{ vertical: "scroll" }}
-        kind="narrow"
-      >
-        <PageContent fill gap="small">
+      <Page background="doc" kind="narrow">
+        <PageContent gap="small">
           <Content>
             <NewBlogPosts />
           </Content>

@@ -1,23 +1,27 @@
 import React from "react";
 import { Text, Footer as Gr_Footer, Box, Button } from "grommet";
-import { Github } from "grommet-icons";
+import { Github, Linkedin } from "grommet-icons";
 import { navigate } from "gatsby";
 
 const Footer: React.FC = () => {
   return (
-    <Gr_Footer background="accent-1" pad="medium">
-      {/* <Button
-        icon={<Github size="medium" />}
-        onClick={() => navigate("https://github.com/TheAspen")}
-      ></Button> */}
+    <Gr_Footer
+      pad="medium"
+      //border={{ color: "dark-4", side: "top", size: "2px" }}
+      background="#222629"
+    >
+      <Box gap="medium" direction="row">
+        <a
+          href="https://github.com/TheAspen"
+          target="__blank"
+          rel="noopener noreferrer"
+        >
+          <Github color="accent-1" size="30px" />
+        </a>
 
-      <a
-        href="https://github.com/TheAspen"
-        target="__blank"
-        rel="noopener noreferrer"
-      >
-        <Github size="medium" />
-      </a>
+        <Linkedin color="accent-1" size="30px" />
+      </Box>
+
       <Text>Footer</Text>
     </Gr_Footer>
   );
