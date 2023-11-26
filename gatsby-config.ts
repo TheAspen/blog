@@ -9,8 +9,11 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
+    'gatsby-plugin-image',
+    'gatsby-remark-images',
     'gatsby-plugin-sharp',
     'gatsby-transformer-remark',
+    'gatsby-transformer-sharp',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -20,6 +23,15 @@ const config: GatsbyConfig = {
         path: `${__dirname}/src/posts/`,
     }
   },
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      // The unique name for each instance
+      name: `images`,
+      // Path to the directory
+      path: `${__dirname}/src/images/`,
+  }
+},
   {
     resolve: `gatsby-transformer-remark`,
     options: {

@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import Content from "./Content";
 import Header from "./Header";
 import Footer from "./Footer";
+import { mainTheme } from "../themes/themes";
 
 interface Props {
   data: {
@@ -21,15 +22,13 @@ const BlogPost = ({ data }: Props) => {
   const { html } = data.markdownRemark;
   const { title, date } = data.markdownRemark.frontmatter;
   return (
-    <Grommet>
+    <Grommet theme={mainTheme}>
       <Header />
-      <Page style={{ height: "100vh" }} kind="narrow">
+      <Page background="main" style={{ height: "100vh" }} kind="narrow">
         <PageContent fill gap="small">
-          <Content>
-            <PageHeader title={title} />
-            <div dangerouslySetInnerHTML={{ __html: html }}></div>
-            <Text> {date}</Text>
-          </Content>
+          <PageHeader title={title} />
+          <div dangerouslySetInnerHTML={{ __html: html }}></div>
+          <Text> {date}</Text>
         </PageContent>
       </Page>
       <Footer />
