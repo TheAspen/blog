@@ -6,6 +6,7 @@ import Header from "./Header";
 import Content from "./Content";
 import Footer from "./Footer";
 import { mainTheme } from "../themes/themes";
+import { ImageDataLike, getImage } from "gatsby-plugin-image";
 
 const BlogPosts: React.FC = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
@@ -16,6 +17,15 @@ const BlogPosts: React.FC = () => {
             index
             title
             desc
+            thumb {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: FIXED
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
+              }
+            }
           }
           id
         }
@@ -43,8 +53,17 @@ const BlogPosts: React.FC = () => {
             {posts.map(
               (post: {
                 id: React.Key | null | undefined;
-                frontmatter: { index: string; title: string; desc: string };
+                frontmatter: {
+                  index: string;
+                  title: string;
+                  desc: string;
+                  thumb: ImageDataLike | undefined;
+                };
               }) => {
+                const image = post.frontmatter.thumb
+                  ? getImage(post.frontmatter.thumb)
+                  : undefined;
+
                 return (
                   <Box
                     key={post.id}
@@ -54,6 +73,7 @@ const BlogPosts: React.FC = () => {
                       index={post.frontmatter.index}
                       content={post.frontmatter.desc}
                       header={post.frontmatter.title}
+                      image={image}
                     ></BlogPostCard>
                   </Box>
                 );

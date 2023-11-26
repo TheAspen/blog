@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, Text, Box, Paragraph } from "grommet";
+import { Heading, Box, Paragraph } from "grommet";
 import { navigate } from "gatsby";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 
@@ -16,7 +16,39 @@ const BlogPostCard = ({
   header,
   image,
 }: Props): JSX.Element => {
-  console.log("image: ", image);
+  const getContent = (): JSX.Element => {
+    if (!image) return <></>;
+
+    // Image is small. Put it next to the text (Right side).
+    if (image.width <= 320) {
+      return (
+        <>
+          <Box>
+            <Heading>{header}</Heading>
+            <Paragraph>{content}</Paragraph>
+          </Box>
+          <GatsbyImage
+            style={{ alignSelf: "center", margin: "auto" }}
+            alt={"thumbnail-" + index}
+            image={image}
+          />
+        </>
+      );
+    }
+    // Image is large. Put it bottom of the text.
+    return (
+      <Box width="100%">
+        <Heading>{header}</Heading>
+        <Paragraph>{content}</Paragraph>
+        <GatsbyImage
+          style={{ alignSelf: "center" }}
+          alt={"thumbnail-" + index}
+          image={image}
+        />
+      </Box>
+    );
+  };
+
   return (
     <Box
       background="#6B6E70"
@@ -25,17 +57,7 @@ const BlogPostCard = ({
       onClick={() => navigate("/posts/" + index)}
       direction="row"
     >
-      <Box>
-        <Heading>{header}</Heading>
-        <Paragraph>{content}</Paragraph>
-      </Box>
-      {image && (
-        <GatsbyImage
-          style={{ alignSelf: "center" }}
-          alt={"thumbnail-" + index}
-          image={image}
-        />
-      )}
+      {getContent()}
     </Box>
   );
 };
