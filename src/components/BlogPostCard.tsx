@@ -37,7 +37,7 @@ const BlogPostCard = ({
     }
     // Image is large. Put it bottom of the text.
     return (
-      <Box width="100%">
+      <Box width="100%" overflow="hidden">
         <Heading>{header}</Heading>
         <Paragraph>{content}</Paragraph>
         <GatsbyImage

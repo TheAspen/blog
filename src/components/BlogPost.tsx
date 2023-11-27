@@ -1,7 +1,6 @@
 import React from "react";
 import { Grommet, Page, PageContent, PageHeader, Text } from "grommet";
 import { graphql } from "gatsby";
-import Content from "./Content";
 import Header from "./Header";
 import Footer from "./Footer";
 import { mainTheme } from "../themes/themes";
@@ -21,6 +20,7 @@ interface Props {
 const BlogPost = ({ data }: Props) => {
   const { html } = data.markdownRemark;
   const { title, date } = data.markdownRemark.frontmatter;
+
   return (
     <Grommet theme={mainTheme}>
       <Header />
