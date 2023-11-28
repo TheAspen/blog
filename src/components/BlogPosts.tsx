@@ -17,6 +17,7 @@ const BlogPosts: React.FC = () => {
             index
             title
             desc
+            date
             thumb {
               childImageSharp {
                 gatsbyImageData(
@@ -57,6 +58,7 @@ const BlogPosts: React.FC = () => {
                   index: string;
                   title: string;
                   desc: string;
+                  date: string;
                   thumb: ImageDataLike | undefined;
                 };
               }) => {
@@ -73,6 +75,7 @@ const BlogPosts: React.FC = () => {
                       index={post.frontmatter.index}
                       content={post.frontmatter.desc}
                       header={post.frontmatter.title}
+                      date={post.frontmatter.date}
                       image={image}
                     ></BlogPostCard>
                   </Box>

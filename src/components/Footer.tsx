@@ -1,7 +1,6 @@
 import React from "react";
 import { Text, Footer as Gr_Footer, Box, Button } from "grommet";
 import { Github, Linkedin } from "grommet-icons";
-import { navigate } from "gatsby";
 
 const Footer: React.FC = () => {
   return (

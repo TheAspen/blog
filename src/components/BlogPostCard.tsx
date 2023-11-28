@@ -7,6 +7,7 @@ interface Props {
   index: string;
   header: string;
   content: string;
+  date: string;
   image?: IGatsbyImageData;
 }
 
@@ -14,6 +15,7 @@ const BlogPostCard = ({
   index,
   content,
   header,
+  date,
   image,
 }: Props): JSX.Element => {
   const getContent = (): JSX.Element => {
@@ -26,6 +28,7 @@ const BlogPostCard = ({
           <Box>
             <Heading>{header}</Heading>
             <Paragraph>{content}</Paragraph>
+            <Paragraph>{date}</Paragraph>
           </Box>
           <GatsbyImage
             style={{ alignSelf: "center", margin: "auto" }}
@@ -40,6 +43,7 @@ const BlogPostCard = ({
       <Box width="100%" overflow="hidden">
         <Heading>{header}</Heading>
         <Paragraph>{content}</Paragraph>
+        <Paragraph>{date}</Paragraph>
         <GatsbyImage
           style={{ alignSelf: "center" }}
           alt={"thumbnail-" + index}

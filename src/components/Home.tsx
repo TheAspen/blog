@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import Header from "./Header";
 import {
   Grommet,
@@ -12,13 +12,10 @@ import {
   Heading,
 } from "grommet";
 import Footer from "./Footer";
-import Content from "./Content";
 import NewBlogPosts from "./NewBlogPosts";
 import { mainTheme } from "../themes/themes";
 
 const App: React.FC = () => {
-  const size = useContext(ResponsiveContext);
-  console.log(useContext(ResponsiveContext));
   return (
     <Grommet theme={mainTheme}>
       <Header />
@@ -48,16 +45,6 @@ const App: React.FC = () => {
             )}
           </ResponsiveContext.Consumer>
         </PageContent>
-        {/* <PageContent gap="small">
-          <Content>
-            <Box direction="row" gap="small" justify="evenly">
-              <Box>JOU</Box>
-              <Box>
-                <NewBlogPosts />
-              </Box>
-            </Box>
-          </Content>
-        </PageContent> */}
       </Page>
       <Footer />
     </Grommet>

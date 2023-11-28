@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { navigate } from "gatsby";
 import {
   Button,
@@ -23,7 +23,7 @@ const customTheme = {
   },
   menu: {
     background: "#595e63",
-    extend: `border: 3px solid gray, borderRadius: 10px`,
+    extend: `border: 1px solid #6FFFB0; borderRadius: 8px`,
   },
 };
 
@@ -31,57 +31,59 @@ const aboutPage = "/about/";
 const homePage = "/";
 const blogPage = "/posts/";
 
-const Header: React.FC = () => {
+const Header = () => {
+  const size = useContext(ResponsiveContext);
   return (
     <Grommet theme={customTheme}>
       <Gr_Header pad="small" background="#474b4F" sticky="scrollup">
         <Text>Gr_Header1</Text>
-        <ResponsiveContext.Consumer>
-          {(size) => {
-            return size == "small" ? (
-              <Menu
-                margin={{ right: "30px" }}
-                icon={<MenuIcon color="accent-1" />}
-                dropAlign={{ top: "bottom" }}
-                items={[
-                  {
-                    label: "Home",
-                    onClick: () => navigate(homePage),
-                    style: { padding: "5px 15px 5px 15px" },
-                  },
-                  {
-                    label: "Devlog",
-                    onClick: () => navigate(blogPage),
-                    style: { padding: "5px 15px 5px 15px" },
-                  },
-                  {
-                    label: "About",
-                    onClick: () => navigate(aboutPage),
-                    style: { padding: "5px 15px 5px 15px" },
-                  },
-                ]}
-              />
-            ) : (
-              <Nav direction="row">
-                <Button
-                  secondary
-                  label="Home"
-                  onClick={() => navigate(homePage)}
-                />
-                <Button
-                  secondary
-                  label="Devlog"
-                  onClick={() => navigate(blogPage)}
-                />
-                <Button
-                  secondary
-                  label="About"
-                  onClick={() => navigate(aboutPage)}
-                />
-              </Nav>
-            );
-          }}
-        </ResponsiveContext.Consumer>
+        {size == "small" || size == "medium" ? (
+          <Menu
+            margin={{ right: "30px" }}
+            icon={<MenuIcon color="accent-1" />}
+            dropAlign={{ top: "bottom" }}
+            items={[
+              {
+                label: "Home",
+                onClick: () => navigate(homePage),
+                style:
+                  size == "small"
+                    ? { padding: "5px 15px 5px 15px" }
+                    : { padding: "5px 20px 5px 20px" },
+              },
+              {
+                label: "Devlog",
+                onClick: () => navigate(blogPage),
+                style:
+                  size == "small"
+                    ? { padding: "5px 15px 5px 15px" }
+                    : { padding: "5px 20px 5px 20px" },
+              },
+              {
+                label: "About",
+                onClick: () => navigate(aboutPage),
+                style:
+                  size == "small"
+                    ? { padding: "5px 15px 5px 15px" }
+                    : { padding: "5px 20px 5px 20px" },
+              },
+            ]}
+          />
+        ) : (
+          <Nav direction="row">
+            <Button secondary label="Home" onClick={() => navigate(homePage)} />
+            <Button
+              secondary
+              label="Devlog"
+              onClick={() => navigate(blogPage)}
+            />
+            <Button
+              secondary
+              label="About"
+              onClick={() => navigate(aboutPage)}
+            />
+          </Nav>
+        )}
       </Gr_Header>
     </Grommet>
   );
