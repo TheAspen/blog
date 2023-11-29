@@ -12,7 +12,7 @@ import Footer from "./Footer";
 import Content from "./Content";
 import { mainTheme } from "../themes/themes";
 
-const App: React.FC = () => {
+const About: React.FC = () => {
   return (
     <Grommet theme={mainTheme}>
       <Header />
@@ -37,4 +37,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default About;

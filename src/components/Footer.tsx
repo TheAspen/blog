@@ -1,6 +1,9 @@
 import React from "react";
 import { Text, Footer as Gr_Footer, Box, Button } from "grommet";
 import { Github, Linkedin } from "grommet-icons";
+import { Link, navigate } from "gatsby";
+
+const privacyPage = "/privacy-policies/";
 
 const Footer: React.FC = () => {
   return (
@@ -21,7 +24,12 @@ const Footer: React.FC = () => {
         <Linkedin color="accent-1" size="30px" />
       </Box>
 
-      <Text>Footer</Text>
+      <Link
+        style={{ alignSelf: "center", color: "white", fontSize: "14px" }}
+        to={privacyPage}
+      >
+        Privacy policy
+      </Link>
     </Gr_Footer>
   );
 };
