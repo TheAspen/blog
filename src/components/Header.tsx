@@ -36,7 +36,7 @@ const Header = () => {
   return (
     <Grommet theme={customTheme}>
       <Gr_Header pad="small" background="#474b4F" sticky="scrollup">
-        <Text>Gr_Header1</Text>
+        <Text>The Aspen's Devlog</Text>
         {size == "small" || size == "medium" ? (
           <Menu
             margin={{ right: "30px" }}
