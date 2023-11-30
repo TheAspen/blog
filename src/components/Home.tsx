@@ -4,7 +4,6 @@ import {
   Grommet,
   Page,
   PageContent,
-  Text,
   Box,
   ResponsiveContext,
   Grid,
@@ -19,21 +18,14 @@ const App: React.FC = () => {
   return (
     <Grommet theme={mainTheme}>
       <Header />
-      <Page background="main">
+      <Page background="main" style={{ minHeight: "100vh" }}>
         <PageContent>
           <ResponsiveContext.Consumer>
             {(size) => (
               <Grid columns={size === "small" ? "100%" : ["55%", "45%"]}>
                 <Box>
                   <Heading size="medium">Welcome</Heading>
-                  <Paragraph>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Integer commodo gravida tincidunt. Nunc fringilla blandit
-                    tortor, id accumsan nisi dictum quis. Aenean porttitor at mi
-                    id semper. Donec mattis bibendum leo, interdum ullamcorper
-                    lectus ultrices vel. Fusce nec enim faucibus nunc porta
-                    egestas. Fusce dapibus lobortis tincidunt.
-                  </Paragraph>
+                  <Paragraph>- Teemu, The Aspen</Paragraph>
                 </Box>
                 <Box>
                   <Heading textAlign="center" size="small">

@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
           <Github color="accent-1" size="30px" />
         </a>
 
-        <Linkedin color="accent-1" size="30px" />
+        {/* <Linkedin color="accent-1" size="30px" /> */}
       </Box>
 
       <Link

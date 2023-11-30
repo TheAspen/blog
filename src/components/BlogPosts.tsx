@@ -48,7 +48,7 @@ const BlogPosts: React.FC = () => {
   return (
     <Grommet theme={mainTheme}>
       <Header />
-      <Page background="main" kind="narrow">
+      <Page style={{ minHeight: "100vh" }} background="main" kind="narrow">
         <PageContent fill gap="small">
           <Content>
             {posts.map(

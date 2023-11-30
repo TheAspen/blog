@@ -10,6 +10,7 @@ import {
   Menu,
 } from "grommet";
 import { Menu as MenuIcon } from "grommet-icons";
+import { Head } from "./Head";
 
 const customTheme = {
   button: {
@@ -35,6 +36,7 @@ const Header = () => {
   const size = useContext(ResponsiveContext);
   return (
     <Grommet theme={customTheme}>
+      <Head />
       <Gr_Header pad="small" background="#474b4F" sticky="scrollup">
         <Text>The Aspen's Devlog</Text>
         {size == "small" || size == "medium" ? (
