@@ -4,7 +4,6 @@ import {
   Grommet,
   Page,
   PageContent,
-  Text,
   Box,
   ResponsiveContext,
   Grid,

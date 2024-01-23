@@ -19,7 +19,14 @@ const BlogPostCard = ({
   image,
 }: Props): JSX.Element => {
   const getContent = (): JSX.Element => {
-    if (!image) return <></>;
+    if (!image)
+      return (
+        <Box>
+          <Heading>{header}</Heading>
+          <Paragraph>{content}</Paragraph>
+          <Paragraph>{date}</Paragraph>
+        </Box>
+      );
 
     // Image is small. Put it next to the text (Right side).
     if (image.width <= 320) {
