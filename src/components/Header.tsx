@@ -13,8 +13,9 @@ import { Menu as MenuIcon } from "grommet-icons";
 
 const customTheme = {
   button: {
+    color: "white",
     border: {
-      color: "accent-1",
+      color: "#05eefa",
     },
     primary: {
       color: "status-ok",
@@ -35,7 +36,7 @@ const Header = () => {
   const size = useContext(ResponsiveContext);
   return (
     <Grommet theme={customTheme}>
-      <Gr_Header pad="small" background="#474b4F" sticky="scrollup">
+      <Gr_Header pad="small" sticky="scrollup">
         <Text>The Aspen's Devlog</Text>
         {size == "small" || size == "medium" ? (
           <Menu

@@ -55,11 +55,14 @@ const BlogPostCard = ({
 
   return (
     <Box
-      background="#6B6E70"
+      //background="#00488c"
+      background="#013c73"
+      border={{ color: "#05eefa", size: "2px" }}
       pad="small"
       round
       onClick={() => navigate("/posts/" + index)}
       direction="row"
+      style={{ boxShadow: "0 0 10px 2px #48abe0" }}
     >
       {getContent()}
     </Box>

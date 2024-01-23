@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
     <Gr_Footer
       pad="medium"
       //border={{ color: "dark-4", side: "top", size: "2px" }}
-      background="#222629"
+      background="rgba(23,23,23,1)"
     >
       <Box gap="medium" direction="row">
         <a
