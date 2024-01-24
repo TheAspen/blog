@@ -8,11 +8,15 @@ import {
   Text,
   ResponsiveContext,
   Menu,
+  Anchor,
 } from "grommet";
 import { Menu as MenuIcon } from "grommet-icons";
 import { Head } from "./Head";
 
 const customTheme = {
+  anchor: {
+    color: "white",
+  },
   button: {
     color: "white",
     border: {
@@ -37,13 +41,8 @@ const Header = () => {
   const size = useContext(ResponsiveContext);
   return (
     <Grommet theme={customTheme}>
-<<<<<<< HEAD
-      <Gr_Header pad="small" sticky="scrollup">
-=======
-      <Head />
-      <Gr_Header pad="small" background="#474b4F" sticky="scrollup">
->>>>>>> 9ecb6b2d649b34801b3ed48ca2d6b7af4b6242ea
-        <Text>The Aspen's Devlog</Text>
+      <Gr_Header pad="medium" sticky="scrollup" justify="center">
+        {/* <Text>The Aspen's Devlog</Text> */}
         {size == "small" || size == "medium" ? (
           <Menu
             margin={{ right: "30px" }}
@@ -77,8 +76,11 @@ const Header = () => {
             ]}
           />
         ) : (
-          <Nav direction="row">
-            <Button secondary label="Home" onClick={() => navigate(homePage)} />
+          <Nav direction="row" gap="large">
+            <Anchor label="Home" onClick={() => navigate(homePage)}></Anchor>
+            <Anchor label="Devlog" onClick={() => navigate(blogPage)}></Anchor>
+            <Anchor label="About" onClick={() => navigate(aboutPage)}></Anchor>
+            {/* <Button secondary label="Home" onClick={() => navigate(homePage)} />
             <Button
               secondary
               label="Devlog"
@@ -88,7 +90,7 @@ const Header = () => {
               secondary
               label="About"
               onClick={() => navigate(aboutPage)}
-            />
+            /> */}
           </Nav>
         )}
       </Gr_Header>

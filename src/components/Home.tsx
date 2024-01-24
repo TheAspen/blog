@@ -40,7 +40,7 @@ const App: React.FC = () => {
                   </Box>
                   <Box>
                     <Heading textAlign="center" size="small">
-                      Latest Devlogs
+                      Latest Devlog
                     </Heading>
                     <NewBlogPosts />
                   </Box>

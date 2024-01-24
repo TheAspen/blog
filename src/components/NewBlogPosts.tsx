@@ -42,7 +42,7 @@ const NewBlogPosts: React.FC = () => {
     .reverse();
 
   const firstPosts = [];
-  for (let i = 0; i < 2; i++) {
+  for (let i = 0; i < 1; i++) {
     if (posts[i] === undefined) continue;
     firstPosts.push(posts[i]);
   }
