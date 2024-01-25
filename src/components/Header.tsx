@@ -41,8 +41,8 @@ const Header = () => {
   const size = useContext(ResponsiveContext);
   return (
     <Grommet theme={customTheme}>
-      <Gr_Header pad="medium" sticky="scrollup" justify="center">
-        {/* <Text>The Aspen's Devlog</Text> */}
+      <Gr_Header pad="medium" sticky="scrollup" justify="between">
+        <Text>The Aspen's Devlog</Text>
         {size == "small" || size == "medium" ? (
           <Menu
             margin={{ right: "30px" }}
