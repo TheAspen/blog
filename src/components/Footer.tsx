@@ -1,36 +1,101 @@
 import React from "react";
-import { Footer as Gr_Footer, Box } from "grommet";
+import {
+  Footer as Gr_Footer,
+  Box,
+  Text,
+  Anchor,
+  Paragraph,
+  ResponsiveContext,
+} from "grommet";
 import { Github, Linkedin } from "grommet-icons";
 import { Link } from "gatsby";
+import { navigate } from "gatsby";
 
 const privacyPage = "/privacy-policies/";
 
+const aboutPage = "/about/";
+const homePage = "/";
+const blogPage = "/posts/";
+
 const Footer: React.FC = () => {
   return (
-    <Gr_Footer
-      pad="medium"
-      //border={{ color: "dark-4", side: "top", size: "2px" }}
-      background="rgba(23,23,23,1)"
-    >
-      <Box gap="medium" direction="row">
-        <a
-          href="https://github.com/TheAspen"
-          target="__blank"
-          rel="noopener noreferrer"
-        >
-          <Github color="accent-1" size="30px" />
-        </a>
+    <Box>
+      <ResponsiveContext.Consumer>
+        {(size) => (
+          <Gr_Footer
+            direction={size === "small" ? "column" : "row"}
+            pad="medium"
+            //border={{ color: "dark-4", side: "top", size: "2px" }}
+            background="rgba(23,23,23,1)"
+          >
+            <Box align={size === "small" ? "center" : "start"}>
+              <Text>The Aspen's Devlog</Text>
+              <Paragraph>Game development blog posts</Paragraph>
+            </Box>
+            <Box gap="medium">
+              <Text>Browse</Text>
+              <Box gap="small">
+                <Anchor
+                  size="small"
+                  label="Home"
+                  onClick={() => navigate(homePage)}
+                ></Anchor>
+                <Anchor
+                  size="small"
+                  label="Devlog"
+                  onClick={() => navigate(blogPage)}
+                ></Anchor>
+                <Anchor
+                  size="small"
+                  label="About"
+                  onClick={() => navigate(aboutPage)}
+                ></Anchor>
+              </Box>
+            </Box>
 
-        {/* <Linkedin color="accent-1" size="30px" /> */}
-      </Box>
+            <Box
+              pad="small"
+              gap={size === "small" ? "large" : "medium"}
+              direction="row"
+            >
+              <a
+                href="https://github.com/TheAspen"
+                target="__blank"
+                rel="noopener noreferrer"
+              >
+                <Github color="accent-1" size="30px" />
+              </a>
 
-      <Link
-        style={{ alignSelf: "center", color: "white", fontSize: "16px" }}
-        to={privacyPage}
+              <a
+                href="https://linkedin.com/in/teemumiet"
+                target="__blank"
+                rel="noopener noreferrer"
+              >
+                <Linkedin color="accent-1" size="30px" />
+              </a>
+            </Box>
+          </Gr_Footer>
+        )}
+      </ResponsiveContext.Consumer>
+      <Gr_Footer
+        background="dark-1"
+        pad={{ horizontal: "large", vertical: "small" }}
+        title="Copyright"
+        role="none"
       >
-        Privacy policy
-      </Link>
-    </Gr_Footer>
+        <Text textAlign="center" size="small">
+          © 2023 Copyright
+        </Text>
+        <Link
+          style={{ alignSelf: "center", color: "white", fontSize: "16px" }}
+          to={privacyPage}
+        >
+          <Text textAlign="center" size="small">
+            Privacy policy
+          </Text>
+        </Link>
+      </Gr_Footer>
+    </Box>
   );
 };
 
