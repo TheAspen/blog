@@ -15,8 +15,8 @@ import { mainTheme } from "../themes/themes";
 const About: React.FC = () => {
   return (
     <Grommet theme={mainTheme}>
-      <Header />
       <Page background="main" style={{ height: "100vh" }}>
+        <Header />
         <PageContent fill gap="small">
           <ResponsiveContext.Consumer>
             {(size) => (

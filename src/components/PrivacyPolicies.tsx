@@ -8,8 +8,8 @@ import { mainTheme } from "../themes/themes";
 const PrivacyPolicies: React.FC = () => {
   return (
     <Grommet theme={mainTheme}>
-      <Header />
       <Page background="main">
+        <Header />
         <PageContent fill gap="small">
           <Content>
             <h1>Privacy Policy</h1>

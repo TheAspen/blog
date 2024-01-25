@@ -23,8 +23,8 @@ const BlogPost = ({ data }: Props) => {
 
   return (
     <Grommet theme={mainTheme}>
-      <Header />
       <Page background="main" style={{ height: "100vh" }} kind="narrow">
+        <Header />
         <PageContent fill gap="small">
           <PageHeader title={title} />
           <div dangerouslySetInnerHTML={{ __html: html }}></div>
