@@ -70,6 +70,7 @@ const BlogPostCard = ({
       onClick={() => navigate("/posts/" + index)}
       direction="row"
       style={{ boxShadow: "0 0 10px 2px #48abe0" }}
+      //hoverIndicator={{ background: "light-1" }}
     >
       {getContent()}
     </Box>

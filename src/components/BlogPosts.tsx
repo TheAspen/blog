@@ -69,7 +69,7 @@ const BlogPosts: React.FC = () => {
                 return (
                   <Box
                     key={post.id}
-                    style={{ marginTop: "10px", marginBottom: "10px" }}
+                    style={{ marginTop: "20px", marginBottom: "10px" }}
                   >
                     <BlogPostCard
                       index={post.frontmatter.index}
