@@ -26,13 +26,14 @@ const Footer: React.FC = () => {
             direction={size === "small" ? "column" : "row"}
             pad="medium"
             //border={{ color: "dark-4", side: "top", size: "2px" }}
-            background="rgba(23,23,23,1)"
+            background="background-back"
           >
             <Box align={size === "small" ? "center" : "start"}>
               <Text>The Aspen's Devlog</Text>
               <Paragraph>Game development blog posts</Paragraph>
             </Box>
-            <Box gap="medium">
+
+            <Box gap="medium" justify="center" align="center">
               <Text>Browse</Text>
               <Box gap="small">
                 <Anchor
@@ -57,6 +58,8 @@ const Footer: React.FC = () => {
               pad="small"
               gap={size === "small" ? "large" : "medium"}
               direction="row"
+              justify="center"
+              align="center"
             >
               <a
                 href="https://github.com/TheAspen"
@@ -78,7 +81,7 @@ const Footer: React.FC = () => {
         )}
       </ResponsiveContext.Consumer>
       <Gr_Footer
-        background="dark-1"
+        background="background-contrast"
         pad={{ horizontal: "large", vertical: "small" }}
         title="Copyright"
         role="none"

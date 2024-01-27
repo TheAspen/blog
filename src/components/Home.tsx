@@ -40,19 +40,38 @@ const App: React.FC = () => {
           <ResponsiveContext.Consumer>
             {(size) => (
               <>
-                <Box align="center" justify="center">
-                  <Heading size="medium">Welcome!</Heading>
-                  <Paragraph>{introduction}</Paragraph>
-                  <Paragraph>{introduction2}</Paragraph>
-                  <Paragraph>{introduction3}</Paragraph>
-                  <Paragraph>{signing}</Paragraph>
-                  <Button
-                    size="large"
-                    gap="medium"
-                    onClick={() => navigate(blogPage)}
-                    label="To the Devlog!"
-                  />
-                </Box>
+                <Grid
+                  rows={["flex", "auto"]}
+                  columns={size === "small" ? "100%" : ["20%", "60%", "20%"]}
+                >
+                  <Box></Box>
+                  <Box>
+                    <Heading alignSelf="center" size="medium">
+                      Welcome!
+                    </Heading>
+                    <Paragraph fill size="large">
+                      {introduction}
+                    </Paragraph>
+                    <Paragraph fill size="large">
+                      {introduction2}
+                    </Paragraph>
+                    <Paragraph fill size="large">
+                      {introduction3}
+                    </Paragraph>
+                    <Paragraph fill alignSelf="center" size="large">
+                      {signing}
+                    </Paragraph>
+                    <Button
+                      alignSelf="center"
+                      gap="medium"
+                      size="xlarge"
+                      pad="small"
+                      onClick={() => navigate(blogPage)}
+                      label="To the Devlog!"
+                    />
+                  </Box>
+                  <Box></Box>
+                </Grid>
 
                 <Box align="center" pad="xlarge">
                   <Box
@@ -73,7 +92,7 @@ const App: React.FC = () => {
                       Star defender is arcade-like top-down shooter. Inspired
                       from old Amiga game called Star Control.
                     </Text>
-                    <Button label="Button" />
+                    <Button label="Project introduction" />
                   </Box>
                 </Box>
                 <Grid
