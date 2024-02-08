@@ -1,5 +1,5 @@
 import React from "react";
-import { Grommet, Page, PageContent, PageHeader, Text } from "grommet";
+import { Grommet, Heading, Page, PageContent, PageHeader, Text } from "grommet";
 import { graphql } from "gatsby";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -25,10 +25,10 @@ const BlogPost = ({ data }: Props) => {
     <Grommet theme={mainTheme}>
       <Page background="main" kind="narrow">
         <Header />
-        <PageContent fill gap="small">
-          <PageHeader title={title} />
+        <PageContent fill margin="small" gap="small">
+          <Heading alignSelf="center">{title}</Heading>
           <div dangerouslySetInnerHTML={{ __html: html }}></div>
-          <Text> {date}</Text>
+          <Text alignSelf="end"> {date}</Text>
         </PageContent>
       </Page>
       <Footer />
