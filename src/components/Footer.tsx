@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
           >
             <Box align={size === "small" ? "center" : "start"}>
               <Text>The Aspen's Devlog</Text>
-              <Paragraph>Game development blog posts</Paragraph>
+              <Paragraph>Game development blog</Paragraph>
             </Box>
 
             <Box gap="medium" justify="center" align="center">
@@ -50,6 +50,7 @@ const Footer: React.FC = () => {
                   size="small"
                   label="About"
                   onClick={() => navigate(aboutPage)}
+                  disabled
                 ></Anchor>
               </Box>
             </Box>

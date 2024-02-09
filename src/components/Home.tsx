@@ -11,21 +11,19 @@ import {
   Heading,
   Button,
   Text,
+  Image,
+  Tip,
 } from "grommet";
 import Footer from "./Footer";
 import NewBlogPosts from "./NewBlogPosts";
 import { mainTheme } from "../themes/themes";
-import Carousel from "./Carousel";
 import { navigate } from "gatsby";
 
 const blogPage = "/posts/";
 const aboutPage = "/about/";
 
-const introduction = `Greetings and welcome to read my game development devlog. On
-this website I will publish development logs how my game
-project is ongoing.`;
-const introduction2 = `For now this devlog only focus to top-down shooter called Star Defender, but more about the project on
-the devlog page!`;
+const introduction = `Greetings, and welcome to read my game development devlog. On this website, I will publish development logs of how my game project is ongoing.`;
+const introduction2 = `For now, this devlog only focuses on a top-down shooter called Star Defender, but more about the project is on the devlog page!`;
 
 const introduction3 = `I hope you enjoy the posts and other content! Thanks for joining!`;
 
@@ -45,10 +43,12 @@ const App: React.FC = () => {
                   columns={size === "small" ? "100%" : ["20%", "60%", "20%"]}
                 >
                   <Box></Box>
+
                   <Box>
                     <Heading alignSelf="center" size="medium">
                       Welcome!
                     </Heading>
+
                     <Paragraph fill size="large">
                       {introduction}
                     </Paragraph>
@@ -79,20 +79,31 @@ const App: React.FC = () => {
                     align="center"
                     justify="center"
                     gap="small"
-                    // background={{
-                    //   image: "url(/images/carousel_border.png)",
-                    //   opacity: "strong",
-                    // }}
+                    background={{
+                      image: "url(/images/pic_4.png)",
+                      opacity: "strong",
+                    }}
                     pad="medium"
                   >
                     <Text weight="bold" size="xxlarge">
                       Project: Star Defender
                     </Text>
-                    <Text weight="bold" size="xlarge">
-                      Star defender is arcade-like top-down shooter. Inspired
-                      from old Amiga game called Star Control.
+                    <Text weight="bold" size="xlarge" textAlign="center">
+                      Star Defender is an arcade-like top-down shooter. Collect
+                      new weapons or upgrade existing ones to fight better
+                      against enemy waves.
                     </Text>
-                    <Button label="Project introduction" />
+
+                    <Box>
+                      <Text size="small">
+                        Project introduction will be added soon!
+                      </Text>
+                      <Button
+                        style={{ textDecorationLine: "line-through" }}
+                        disabled
+                        label="Project introduction"
+                      />
+                    </Box>
                   </Box>
                 </Box>
                 <Grid
@@ -103,19 +114,24 @@ const App: React.FC = () => {
                   <Box align="start">
                     <Heading size="small">About the author</Heading>
                     <Paragraph>
-                      I'm software engineer from Finland whom has been
-                      passionated about games and game development whole my
-                      life. I live in Kajaani which is a small town in Kainuu
-                      region of Finland and I have graduated from Kajaani
-                      University of Applied Sciences where I studied game
-                      development during 2015-2019.
+                      I'm a software engineer from Finland who has been
+                      passionate about games and game development my whole life.
+                      I live in Kajaani, which is a small town in the middle of
+                      nowhere in the Kainuu region of Finland. I studied game
+                      development at Kajaani University of Applied Sciences and
+                      graduated in 2019. Ever since, I have done small game
+                      projects, most of them with Godot Engine or Unreal Engine.
                     </Paragraph>
-                    <Paragraph>More about this on the About page!</Paragraph>
+                    <Paragraph>
+                      About page is still under construction!
+                    </Paragraph>
                     <Button
                       size="medium"
                       gap="medium"
                       onClick={() => navigate(aboutPage)}
                       label="About page"
+                      style={{ textDecorationLine: "line-through" }}
+                      disabled
                     />
                   </Box>
                   <Box>
