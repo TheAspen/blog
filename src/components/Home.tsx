@@ -21,6 +21,7 @@ import { navigate } from "gatsby";
 
 const blogPage = "/posts/";
 const aboutPage = "/about/";
+const introductionPost = "/posts/2/";
 
 const introduction = `Greetings, and welcome to read my game development devlog. On this website, I will publish development logs of how my game project is ongoing.`;
 const introduction2 = `For now, this devlog only focuses on a top-down shooter called Star Defender, but more about the project is on the devlog page!`;
@@ -93,17 +94,10 @@ const App: React.FC = () => {
                       new weapons or upgrade existing ones to fight better
                       against enemy waves.
                     </Text>
-
-                    <Box>
-                      <Text size="small">
-                        Project introduction will be added soon!
-                      </Text>
-                      <Button
-                        style={{ textDecorationLine: "line-through" }}
-                        disabled
-                        label="Project introduction"
-                      />
-                    </Box>
+                    <Button
+                      onClick={() => navigate(introductionPost)}
+                      label="Project introduction"
+                    />
                   </Box>
                 </Box>
                 <Grid

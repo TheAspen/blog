@@ -66,14 +66,14 @@ const Header = () => {
                     ? { padding: "5px 15px 5px 15px" }
                     : { padding: "5px 20px 5px 20px" },
               },
-              {
-                label: "About",
-                onClick: () => navigate(aboutPage),
-                style:
-                  size == "small"
-                    ? { padding: "5px 15px 5px 15px" }
-                    : { padding: "5px 20px 5px 20px" },
-              },
+              // {
+              //   label: "About",
+              //   onClick: () => navigate(aboutPage),
+              //   style:
+              //     size == "small"
+              //       ? { padding: "5px 15px 5px 15px" }
+              //       : { padding: "5px 20px 5px 20px" },
+              // },
             ]}
           />
         ) : (
