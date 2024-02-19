@@ -32,13 +32,18 @@ const BlogPostCard = ({
     if (image.width <= 320) {
       return (
         <>
-          <Box>
+          <Box flex="shrink">
             <Heading>{header}</Heading>
             <Paragraph>{content}</Paragraph>
             <Paragraph>{date}</Paragraph>
           </Box>
           <GatsbyImage
-            style={{ alignSelf: "center", margin: "auto" }}
+            style={{
+              alignSelf: "center",
+              margin: "auto",
+              display: "flex",
+              flex: "none",
+            }}
             alt={"thumbnail-" + index}
             image={image}
           />
