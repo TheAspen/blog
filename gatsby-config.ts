@@ -73,6 +73,9 @@ const config: GatsbyConfig = {
             ignoreFileExtensions: [`png`, `jpg`, `jpeg`, `bmp`, `tiff`],
           },
         },
+        {
+          resolve: `gatsby-plugin-styled-components`,
+        }
       ],
     },
   },
