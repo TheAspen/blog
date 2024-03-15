@@ -1,5 +1,5 @@
-import React from "react";
-import { Heading, Box, Paragraph } from "grommet";
+import React, { useContext } from "react";
+import { Heading, Box, Paragraph, ResponsiveContext } from "grommet";
 import { navigate } from "gatsby";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 
@@ -18,6 +18,7 @@ const BlogPostCard = ({
   date,
   image,
 }: Props): JSX.Element => {
+  const size = useContext(ResponsiveContext);
   const getContent = (): JSX.Element => {
     if (!image)
       return (
@@ -29,10 +30,10 @@ const BlogPostCard = ({
       );
 
     // Image is small. Put it next to the text (Right side).
-    if (image.width <= 320) {
+    if (image.width <= 320 && size !== "small") {
       return (
         <>
-          <Box flex="shrink">
+          <Box>
             <Heading>{header}</Heading>
             <Paragraph>{content}</Paragraph>
             <Paragraph>{date}</Paragraph>

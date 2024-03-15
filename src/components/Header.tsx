@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { navigate } from "gatsby";
 import {
-  Button,
   Header as Gr_Header,
   Nav,
   Grommet,
@@ -12,7 +11,6 @@ import {
   Tip,
 } from "grommet";
 import { Menu as MenuIcon } from "grommet-icons";
-import { Head } from "./Head";
 
 const customTheme = {
   anchor: {
