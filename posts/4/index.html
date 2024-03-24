@@ -57,7 +57,7 @@ data-styled.g21[id="StyledParagraph-sc-tbetod-0"]{content:"ewxBUK,"}/*!sc*/
 <p>So, how do I fix this? The spaceship should rotate automatically in the direction in which it is moving. Ok, that was not so hard to implement, but still, it was not quite there yet. It just did not feel right, or would I say realistic (Alas, I have not flown a spaceship.), but it just looked a bit weird when the spaceship immediately changed its rotation when I'm pressing any "W A S D" key, which is controlling the ship's movement. Then I thought, Should it act like a car? When you press the movement keys, it should add force to the direction where the ship is looking, but at the same time, it should maneuver the rotation in the desired direction. Also, it should not stop immediately when I release any pressed keys but rather start slowing down its speed, like braking with a car. And there it was. After implementing that, the movement felt smooth and (relatively) realistic.</p>
 <p>And I only noticed that because I was testing a layout prototype. When the player was a simple shape, this was not a problem at all, but when I changed it to look at least somewhat like a real-world object, my brain was expecting a certain type of behavior. This also gives me the opportunity to create different ships with different maneuver speeds!</p>
 <p>It is hard to show this in action, but I hope the following gif gives some perception of what I mean.</p>
-<p><img src="/bbe5661008c17f57cdbc3bd06c700788/movement-demo.gif" alt="Level 3 gun"></p>
+<p><img src="/bbe5661008c17f57cdbc3bd06c700788/movement-demo.gif" alt="Movement demo"></p>
 <h2>Weapon concepts</h2>
 <p>Now that I have started sketching and prototyping graphical stuff, the basic five weapons that I have planned are coming together. I also got the idea to use colors here to represent the weapon level. In this game, there are three levels for each weapon: the 1 is the lowest, a basic version of the gun, and the 3 is the best version of it.
 Here is an example of what it would look like:</p>
@@ -68,7 +68,7 @@ Here is an example of what it would look like:</p>
 All weapons are going to follow these same principles, and it's a cool way to add details to the weapons too.</p>
 <p>Here are some other concepts about the weapons:</p>
 <p><img src="/16cc0dedb1457dfec1eb61d35e11cb3b/minigun.gif" alt="Minigun">
-<img src="/10a094fa8b3bef960c87e64d10aa362e/shotgun.gif" alt="Shotgun "></p>
+<img src="/10a094fa8b3bef960c87e64d10aa362e/shotgun.gif" alt="Shotgun"></p>
 <h2>And how about coding?</h2>
 <p>Lots of code has been done regarding animation handling and such. The power-up system is also done. Now I only have to do the actual power-ups, but the "engine" is there.
 Bug fixes are also done here and there. I'd like to keep things working, but the problem is that when you start fixing a minor bug, you notice that there is another bug, and look, that other thing is also broken if you do things in certain ways, and now you are on the sidetrack in the bugtrain. Maybe I should start to report bugs I find to some other system and keep track of them from there. I don't know; maybe that is just extra work? But if I fix them right away (what I'm doing now), the risk of doing lots of other things than what I was planning to do is huge.</p>
