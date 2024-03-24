@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
         role="none"
       >
         <Text textAlign="center" size="small">
-          © 2024 Copyright, Teemu Miettinen
+          © 2024 Teemu Miettinen
         </Text>
         <Link
           style={{ alignSelf: "center", color: "white", fontSize: "16px" }}
