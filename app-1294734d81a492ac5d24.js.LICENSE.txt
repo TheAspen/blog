@@ -1,6 +1,6 @@
 /**
  * @license React
- * react-dom-server-legacy.browser.production.min.js
+ * react-server-dom-webpack.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -8,9 +8,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-/**
- * @license React
- * react-dom-server.browser.production.min.js
+/** @license React v16.13.1
+ * react-is.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
