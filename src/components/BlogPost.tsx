@@ -1,5 +1,5 @@
 import React from "react";
-import { Grommet, Heading, Page, PageContent, PageHeader, Text } from "grommet";
+import { Grommet, Heading, Page, PageContent, Text } from "grommet";
 import { graphql } from "gatsby";
 import Header from "./Header";
 import Footer from "./Footer";

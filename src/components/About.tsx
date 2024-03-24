@@ -10,7 +10,6 @@ import {
   Image,
 } from "grommet";
 import Footer from "./Footer";
-import Content from "./Content";
 import { mainTheme } from "../themes/themes";
 
 const About: React.FC = () => {
