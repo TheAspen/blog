@@ -30,6 +30,12 @@ const customTheme = {
     background: "#595e63",
     extend: `border: 1px solid #6FFFB0; borderRadius: 8px`,
   },
+  // global: {
+  //   font: {
+  //     family: "Staatliches",
+  //     size: "25px",
+  //   },
+  // },
 };
 
 const aboutPage = "/about/";
