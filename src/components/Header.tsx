@@ -30,12 +30,12 @@ const customTheme = {
     background: "#595e63",
     extend: `border: 1px solid #6FFFB0; borderRadius: 8px`,
   },
-  // global: {
-  //   font: {
-  //     family: "Staatliches",
-  //     size: "25px",
-  //   },
-  // },
+  global: {
+    font: {
+      family: "Staatliches",
+      size: "22px",
+    },
+  },
 };
 
 const aboutPage = "/about/";
@@ -82,11 +82,25 @@ const Header = () => {
           />
         ) : (
           <Nav direction="row" gap="large">
-            <Anchor label="Home" onClick={() => navigate(homePage)}></Anchor>
-            <Anchor label="Devlog" onClick={() => navigate(blogPage)}></Anchor>
+            <Anchor
+              style={{
+                textDecorationThickness: "2px",
+              }}
+              label="Home"
+              onClick={() => navigate(homePage)}
+            ></Anchor>
+            <Anchor
+              style={{
+                textDecorationThickness: "2px",
+              }}
+              label="Devlog"
+              onClick={() => navigate(blogPage)}
+            ></Anchor>
             <Tip content={<Text color="white">Coming soon!</Text>}>
               <Anchor
-                style={{ textDecorationLine: "line-through" }}
+                style={{
+                  textDecorationLine: "line-through",
+                }}
                 disabled
                 label="About"
                 onClick={() => navigate(aboutPage)}
