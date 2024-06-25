@@ -1,4 +1,5 @@
 import React from "react";
+import DOMPurify from "dompurify";
 import { Grommet, Heading, Page, PageContent, Text } from "grommet";
 import { graphql } from "gatsby";
 import Header from "./Header";
@@ -20,6 +21,9 @@ interface Props {
 const BlogPost = ({ data }: Props) => {
   const { html } = data.markdownRemark;
   const { title, date } = data.markdownRemark.frontmatter;
+  const cleanHtml = DOMPurify.sanitize(html as string, {
+    USE_PROFILES: { html: true },
+  });
 
   return (
     <Grommet theme={mainTheme}>
@@ -27,7 +31,7 @@ const BlogPost = ({ data }: Props) => {
         <Header />
         <PageContent fill margin="small" gap="small">
           <Heading alignSelf="center">{title}</Heading>
-          <div dangerouslySetInnerHTML={{ __html: html }}></div>
+          <div dangerouslySetInnerHTML={{ __html: cleanHtml }}></div>
           <Text alignSelf="end"> {date}</Text>
         </PageContent>
       </Page>
