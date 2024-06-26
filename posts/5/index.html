@@ -51,41 +51,29 @@ data-styled.g20[id="StyledAnchor-sc-1rp7lwl-0"]{content:"ezJrUI,klgvKV,hXbDoh,bf
 .ewxBUK{font-size:18px;line-height:24px;max-width:432px;}/*!sc*/
 data-styled.g21[id="StyledParagraph-sc-tbetod-0"]{content:"ewxBUK,"}/*!sc*/
 </style><link rel="preload" href="/fonts/Staatliches-Regular.ttf" as="font" type="font/truetype" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="StyledGrommet-sc-19lkkz7-0 hswdca"><div class="StyledBox-sc-13pk1d4-0 fNiGdS"><div class="StyledGrommet-sc-19lkkz7-0 dshDHf"><header class="StyledBox-sc-13pk1d4-0 eTmCDU"><span class="StyledText-sc-1sadyjn-0 dEknKb">The Aspen&#x27;s Devlog</span><div class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jnfFCk"></div><nav class="StyledBox-sc-13pk1d4-0 gXFuSN"><a style="text-decoration-thickness:2px" class="StyledAnchor-sc-1rp7lwl-0 ezJrUI">Home</a><div class="StyledBox__StyledBoxGap-sc-13pk1d4-1 boJEev"></div><a style="text-decoration-thickness:2px" class="StyledAnchor-sc-1rp7lwl-0 ezJrUI">Devlog</a><div class="StyledBox__StyledBoxGap-sc-13pk1d4-1 boJEev"></div><a style="text-decoration-line:line-through" disabled="" class="StyledAnchor-sc-1rp7lwl-0 klgvKV">About</a></nav></header></div><div class="StyledBox-sc-13pk1d4-0 iRckTm"><h1 class="StyledHeading-sc-1rdh4aw-0 hfaNmi">Enemy concepts</h1><div class="StyledBox__StyledBoxGap-sc-13pk1d4-1 jGGOCk"></div><div><h1><center> Making progress! </center></h1>
-<hr>
+
 <h2>Bring me minions of darkness!</h2>
 <p>Pixel drawing is starting to feel a bit more fun than I used to. I'm not saying that I'm good at it, but I have had a good time with it!
 Let's get straight to the enemy concepts and short introductions of each one:</p>
 <p>The red one! The basic of the basics, regular speed, and the weakest of all.
 The yellow enemy is the faster brother of the red enemy. These are going to be the "starter" enemies.</p>
-<p><img src="/0cd3a0a880ae0892de86851a4e29f4c3/Red_Robot_proto.gif" alt="Red enemy" title="Red robot prototype">
-<img src="/ca37bc061710c072b7fa98c2815b06a6/Yellow_Robot_proto.gif" alt="Yellow enemy" title="Yellow robot prototype"></p>
+<p><img src="/0cd3a0a880ae0892de86851a4e29f4c3/Red_Robot_proto.gif" alt="Red enemy" title="Red robot prototype" />
+<img src="/ca37bc061710c072b7fa98c2815b06a6/Yellow_Robot_proto.gif" alt="Yellow enemy" title="Yellow robot prototype" /></p>
 <p>Then the tanky one. Orange is the slowest in speed, but it has more health points than yellow or red.</p>
-<p><img src="/a5c564f4e2ecae111ad718a5721fc100/Orange_Robot_proto.gif" alt="Orange enemy" title="Orange robot prototype"></p>
+<p><img src="/a5c564f4e2ecae111ad718a5721fc100/Orange_Robot_proto.gif" alt="Orange enemy" title="Orange robot prototype" /></p>
 <p>Yet, these two are more "elite" types of robot enemies, but their specialties are not yet decided. More health points and damage output are guaranteed, at least.</p>
-<p><img src="/e4ab20c84b1f2a836e0907c7325ab065/Pink_Robot_proto.gif" alt="Pink enemy" title="Pink robot prototype">
-<img src="/2e7c2faca53363d60fef6a7c8de03b88/Blue_Robot_proto.gif" alt="Blue enemy" title="Blue robot prototype"></p>
+<p><img src="/e4ab20c84b1f2a836e0907c7325ab065/Pink_Robot_proto.gif" alt="Pink enemy" title="Pink robot prototype" />
+<img src="/2e7c2faca53363d60fef6a7c8de03b88/Blue_Robot_proto.gif" alt="Blue enemy" title="Blue robot prototype" /></p>
 <p>Also, the player got a new look:</p>
-<p><img src="/b3864d6a4116c729d7cd3078707ec378/Player_proto.gif" alt="Player" title="Player prototype"></p>
+<p><img src="/b3864d6a4116c729d7cd3078707ec378/Player_proto.gif" alt="Player" title="Player prototype" /></p>
 <h2>Unexpected issue</h2>
 <p>Now some more serious problems: I noticed that enemies are a bit blurry when they move around on the scene. Godot imports every image by default with the "Filter" tag enabled, but that is not the issue. In fact, enabling "Filter" seems to reduce the blurryness effect. I tried different settings to get rid of this annoying effect, like enabling pixel snapping or changing the renderer to GLES3, but nothing seems to work.</p>
 <p>The high velocity of the object seems to be the main reason for the blurriness. If the velocity is reduced, the issue is gone, but then I have a other problem: the high velocity is one of the main factors of the game, and reducing it too much affects lots of the gameplay. I did testing with my laptop also, and the problem is there too, so it does not seem to be a hardware issue.</p>
 <p>That is the one major problem to solve. I hope the video below represents the issue better.</p>
 <p>
-        <div class="embedVideo-container">
-            <iframe
-              title=""
-              width="800"
-              height="400"
-              src="https://www.youtube-nocookie.com/embed/u889G9POeuE?rel=0"
-              class="embedVideo-iframe"
-              style="border:0"
-              
-              
-              loading="lazy"
-              allowfullscreen
-	      sandbox="allow-same-origin allow-scripts allow-popups"
-            ></iframe>
-        </div></p>
+        </p><div class="embedVideo-container">
+            <iframe width="800" height="400" src="https://www.youtube-nocookie.com/embed/u889G9POeuE?rel=0" class="embedVideo-iframe" style="border:0" loading="lazy" allowfullscreen sandbox="allow-same-origin allow-scripts allow-popups"></iframe>
+        </div><p></p>
 <h2>Smaller thoughts about major matters</h2>
 <p>Last time I mentioned weapon systems, which I have been working on, and so far planned weapons I have managed to do. I might update some animations, so there is still some work to be done. I won't spoil all the fun and the mystery of the game, so I won't publish, at least for now, what the rest of the weapons look like.</p>
 <p>I should make up the new name for the game. The old one, which is a placeholder, is starting to stick in my head, and the whole name is a very generic phrase anyway.</p>
@@ -99,6 +87,6 @@ Maybe I need to find a balance between high velocity and blurriness; we'll see.<
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-1294734d81a492ac5d24.js\"],\"component---src-components-blog-post-tsx\":[\"/component---src-components-blog-post-tsx-b442ff3c45fd0644a4fe.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-69b29e4925ee113b91b2.js\"],\"component---src-pages-about-tsx\":[\"/component---src-pages-about-tsx-cfb68576420b95504968.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-8569df57c40ebd4b9a57.js\"],\"component---src-pages-posts-tsx\":[\"/component---src-pages-posts-tsx-4f6e989e9a712e778ef0.js\"],\"component---src-pages-privacy-policies-tsx\":[\"/component---src-pages-privacy-policies-tsx-92c504e84022e37aa026.js\"]}";
+            window.___chunkMapping="{\"app\":[\"/app-1294734d81a492ac5d24.js\"],\"component---src-components-blog-post-tsx\":[\"/component---src-components-blog-post-tsx-da237127ed5956354345.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-69b29e4925ee113b91b2.js\"],\"component---src-pages-about-tsx\":[\"/component---src-pages-about-tsx-cfb68576420b95504968.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-8569df57c40ebd4b9a57.js\"],\"component---src-pages-posts-tsx\":[\"/component---src-pages-posts-tsx-4f6e989e9a712e778ef0.js\"],\"component---src-pages-privacy-policies-tsx\":[\"/component---src-pages-privacy-policies-tsx-92c504e84022e37aa026.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="0c1e62cc5d8455f22edf";</script><script src="/webpack-runtime-735a7eae4a783b34ef7e.js" async></script><script src="/framework-00bf2bb98c1b8e9fbdeb.js" async></script><script src="/app-1294734d81a492ac5d24.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="40ffef108054796412ae";</script><script src="/webpack-runtime-db53c3c7c340bc30f767.js" async></script><script src="/framework-00bf2bb98c1b8e9fbdeb.js" async></script><script src="/app-1294734d81a492ac5d24.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
