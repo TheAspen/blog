@@ -1,5 +1,5 @@
 import React from "react";
-import DOMPurify from "dompurify";
+import sanitizeHtml from "sanitize-html";
 import { Grommet, Heading, Page, PageContent, Text } from "grommet";
 import { graphql } from "gatsby";
 import Header from "./Header";
@@ -21,8 +21,55 @@ interface Props {
 const BlogPost = ({ data }: Props) => {
   const { html } = data.markdownRemark;
   const { title, date } = data.markdownRemark.frontmatter;
-  const cleanHtml = DOMPurify.sanitize(html as string, {
-    USE_PROFILES: { html: true },
+  const cleanHtml = sanitizeHtml(html as string, {
+    allowedTags: [
+      "img",
+      "b",
+      "i",
+      "em",
+      "strong",
+      "a",
+      "center",
+      "img",
+      "h1",
+      "h2",
+      "h3",
+      "br",
+      "span",
+      "p",
+      "div",
+      "iframe",
+    ],
+
+    allowedAttributes: {
+      a: ["href"],
+      img: [
+        "class",
+        "alt",
+        "src",
+        "title",
+        "srcset",
+        "sizes",
+        "loading",
+        "style",
+      ],
+      iframe: [
+        "src",
+        "class",
+        "title",
+        "width",
+        "height",
+        "loading",
+        "style",
+        "frameborder",
+        "allow",
+        "allowfullscreen",
+        "sandbox",
+      ],
+      span: ["class", "style"],
+      div: ["class", "style"],
+    },
+    allowedIframeHostnames: ["www.youtube.com", "www.youtube-nocookie.com"],
   });
 
   return (
