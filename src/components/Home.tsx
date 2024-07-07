@@ -81,22 +81,27 @@ const App: React.FC = () => {
                     justify="center"
                     gap="small"
                     background={{
-                      image: "url(/images/pic_4.png)",
+                      image: "url(/images/header_new.png)",
                       opacity: "strong",
                     }}
                     pad="medium"
                   >
-                    <Text weight="bold" size="xxlarge">
-                      Project: Star Defender
-                    </Text>
-                    <Text weight="bold" size="xlarge" textAlign="center">
-                      Star Defender is an arcade-like top-down shooter. Collect
-                      new weapons or upgrade existing ones to fight better
-                      against enemy waves.
-                    </Text>
+                    <Image src="/images/enfora_star_text.png"></Image>
+                    <Box
+                      round
+                      pad="small"
+                      background={{ color: "dark-1", opacity: "medium" }}
+                    >
+                      <Text weight="bold" size="xlarge" textAlign="center">
+                        Enfora Star is an arcade-like top-down shooter. Collect
+                        new weapons or upgrade existing ones to fight better
+                        against enemy waves.
+                      </Text>
+                    </Box>
                     <Button
                       onClick={() => navigate(introductionPost)}
                       label="Project introduction"
+                      size="large"
                     />
                   </Box>
                 </Box>
