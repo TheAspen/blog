@@ -24,7 +24,7 @@ const aboutPage = "/about/";
 const introductionPost = "/posts/2/";
 
 const introduction = `Greetings, and welcome to read my game development devlog. On this website, I will publish development logs of how my game project is ongoing.`;
-const introduction2 = `For now, this devlog only focuses on a top-down shooter called Star Defender, but more about the project is on the devlog page!`;
+const introduction2 = `For now, this devlog only focuses on a top-down shooter called Enfora Star, but more about the project is on the devlog page!`;
 
 const introduction3 = `I hope you enjoy the posts and other content! Thanks for joining!`;
 
