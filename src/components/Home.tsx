@@ -86,7 +86,10 @@ const App: React.FC = () => {
                     }}
                     pad="medium"
                   >
-                    <Image src="/images/enfora_star_text.png"></Image>
+                    <Image
+                      style={{ maxWidth: "inherit" }}
+                      src="/images/enfora_star_text.png"
+                    ></Image>
                     <Box
                       round
                       pad="small"
