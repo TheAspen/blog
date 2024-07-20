@@ -30,7 +30,7 @@
     "gatsby-transformer-remark": "^6.12.3",
     "gatsby-transformer-sharp": "^5.12.3",
     "grommet": "^2.34.1",
-    "grommet-icons": "^4.11.0",
+    "grommet-icons": "^4.12.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sanitize-html": "^2.13.0",

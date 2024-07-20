@@ -7,7 +7,7 @@ import {
   Paragraph,
   ResponsiveContext,
 } from "grommet";
-import { Github, Linkedin } from "grommet-icons";
+import { Github, Linkedin, X } from "grommet-icons";
 import { Link } from "gatsby";
 import { navigate } from "gatsby";
 
@@ -68,6 +68,14 @@ const Footer: React.FC = () => {
                 rel="noopener noreferrer"
               >
                 <Github color="accent-1" size="30px" />
+              </a>
+
+              <a
+                href="https://linkedin.com/in/teemumiet"
+                target="__blank"
+                rel="noopener noreferrer"
+              >
+                <X color ="accent-1" size="30px" />
               </a>
 
               <a
