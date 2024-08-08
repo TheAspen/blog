@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
               </a>
 
               <a
-                href="https://linkedin.com/in/teemumiet"
+                href="https://x.com/TheAspenDev"
                 target="__blank"
                 rel="noopener noreferrer"
               >
