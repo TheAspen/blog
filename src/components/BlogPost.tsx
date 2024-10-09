@@ -39,6 +39,8 @@ const BlogPost = ({ data }: Props) => {
       "p",
       "div",
       "iframe",
+      "li",
+      "ul"
     ],
 
     allowedAttributes: {
