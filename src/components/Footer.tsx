@@ -7,7 +7,7 @@ import {
   Paragraph,
   ResponsiveContext,
 } from "grommet";
-import { Github, Linkedin, X } from "grommet-icons";
+import { Github, Linkedin, X, Reddit } from "grommet-icons";
 import { Link } from "gatsby";
 import { navigate } from "gatsby";
 
@@ -76,6 +76,14 @@ const Footer: React.FC = () => {
                 rel="noopener noreferrer"
               >
                 <X color ="accent-1" size="30px" />
+              </a>
+
+              <a
+                href="https://www.reddit.com/user/TheAspenDev/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
+                target="__blank"
+                rel="noopener noreferrer"
+              >
+                <Reddit color ="accent-1" size="30px" />
               </a>
 
               <a
