@@ -1,0 +1,24 @@
+--- BASIC INFORMATION ---
+
+Name: Enfora Star
+Genre: Top-down shooter
+Core gameplay: You must defend the space station Enfora Star against hostile robot waves. Find or buy new weapons or power-up to empower your abilities and build turrets or walls to boost up your
+defence systems.
+Platforms: PC/Linux
+Release: 2025
+Language: English
+Developer: Teemu Miettinen, solo-project. 
+
+
+
+--- TECHINAL SPECIFICATIONS ---
+
+Game engine: Godot 3.x
+Controls: Mouse + keyboard, gamepad
+
+
+
+--- CONTACT INFORMATION ---
+
+Name: Teemu Miettinen
+Email: miettinen.dev@gmail.com

@@ -106,6 +106,11 @@ const Footer: React.FC = () => {
         <Text textAlign="center" size="small">
           © 2024 Teemu Miettinen
         </Text>
+	<a href="/presskit/Info.txt" download>
+	<Text textAlign="center" size="small">
+	Press kit
+	</Text>
+	</a>
         <Link
           style={{ alignSelf: "center", color: "white", fontSize: "16px" }}
           to={privacyPage}
