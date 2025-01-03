@@ -4,6 +4,7 @@ Name: Enfora Star
 Genre: Top-down shooter
 Core gameplay: You must defend the space station Enfora Star against hostile robot waves. Find or buy new weapons or power-up to empower your abilities and build turrets or walls to boost up your
 defence systems.
+Multiplayer: No
 Platforms: PC/Linux
 Release: 2025
 Language: English
@@ -22,3 +23,7 @@ Controls: Mouse + keyboard, gamepad
 
 Name: Teemu Miettinen
 Email: miettinen.dev@gmail.com
+X: https://x.com/TheAspenDev
+Reddit: https://www.reddit.com/user/TheAspenDev/
+Blog: https://www.theaspen.blog/
+
