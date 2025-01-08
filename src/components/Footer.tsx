@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
                 target="__blank"
                 rel="noopener noreferrer"
               >
-                <X color ="accent-1" size="30px" />
+                <X color="accent-1" size="30px" />
               </a>
 
               <a
@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
                 target="__blank"
                 rel="noopener noreferrer"
               >
-                <Reddit color ="accent-1" size="30px" />
+                <Reddit color="accent-1" size="30px" />
               </a>
 
               <a
@@ -106,7 +106,7 @@ const Footer: React.FC = () => {
         <Text textAlign="center" size="small">
           © 2025 Teemu Miettinen
         </Text>
-	{/* <a href="/presskit/Info.txt" download>
+        {/* <a href="/presskit/Info.txt" download>
 	<Text textAlign="center" size="small">
 	Press kit
 	</Text>
