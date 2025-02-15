@@ -5,6 +5,8 @@ import { graphql } from "gatsby";
 import Header from "./Header";
 import Footer from "./Footer";
 import { mainTheme } from "../themes/themes";
+import CookieConsent from "./CookieConsest";
+import MarkdownWrapper from "./MarkdownWrapper";
 
 interface Props {
   data: {
@@ -40,7 +42,7 @@ const BlogPost = ({ data }: Props) => {
       "div",
       "iframe",
       "li",
-      "ul"
+      "ul",
     ],
 
     allowedAttributes: {
@@ -80,10 +82,13 @@ const BlogPost = ({ data }: Props) => {
         <Header />
         <PageContent fill margin="small" gap="small">
           <Heading alignSelf="center">{title}</Heading>
-          <div dangerouslySetInnerHTML={{ __html: cleanHtml }}></div>
+          <MarkdownWrapper>
+            <div dangerouslySetInnerHTML={{ __html: cleanHtml }}></div>
+          </MarkdownWrapper>
           <Text alignSelf="end"> {date}</Text>
         </PageContent>
       </Page>
+      <CookieConsent />
       <Footer />
     </Grommet>
   );

@@ -7,6 +7,7 @@ import Content from "./Content";
 import Footer from "./Footer";
 import { mainTheme } from "../themes/themes";
 import { ImageDataLike, getImage } from "gatsby-plugin-image";
+import CookieConsent from "./CookieConsest";
 
 const BlogPosts: React.FC = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
@@ -85,6 +86,7 @@ const BlogPosts: React.FC = () => {
           </Content>
         </PageContent>
       </Page>
+      <CookieConsent />
       <Footer />
     </Grommet>
   );

@@ -18,6 +18,7 @@ import Footer from "./Footer";
 import NewBlogPosts from "./NewBlogPosts";
 import { mainTheme } from "../themes/themes";
 import { navigate } from "gatsby";
+import CookieConsent from "./CookieConsest";
 
 const blogPage = "/posts/";
 const aboutPage = "/about/";
@@ -148,6 +149,7 @@ const App: React.FC = () => {
           </ResponsiveContext.Consumer>
         </PageContent>
       </Page>
+      <CookieConsent />
       <Footer />
     </Grommet>
   );
