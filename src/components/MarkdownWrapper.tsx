@@ -12,7 +12,7 @@ const MarkdownWrapper: React.FC<MarkdownWrapperProps> = ({ children }) => {
 
     // Check if cookie consent was given
     const cookieConsent = localStorage.getItem("cookiePreferences");
-    let preferences = { functional: false };
+    let preferences = { functional: false, analytics: false, marketing: false };
 
     if (cookieConsent) {
       preferences = JSON.parse(cookieConsent);
@@ -23,7 +23,11 @@ const MarkdownWrapper: React.FC<MarkdownWrapperProps> = ({ children }) => {
       contentRef.current.querySelectorAll('iframe[src*="youtube.com"]');
 
     iframes.forEach((iframe) => {
-      if (!preferences.functional) {
+      if (
+        !preferences.functional ||
+        !preferences.analytics ||
+        !preferences.marketing
+      ) {
         // If functional cookies not accepted, replace with placeholder or use privacy-enhanced mode
         const originalSrc = iframe.src;
         iframe.src = originalSrc.replace("youtube.com", "youtube-nocookie.com");

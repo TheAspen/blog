@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import {
   Box,
   Button,
@@ -8,12 +8,14 @@ import {
   Paragraph,
   Text,
   Anchor,
+  ResponsiveContext,
 } from "grommet";
 import { FormClose } from "grommet-icons";
 
 const privacyPage = "/privacy-policies/";
 
-const CookieConsent = ({ cookiePolicyUrl = "/cookie-policy" }) => {
+const CookieConsent = () => {
+  const size = useContext(ResponsiveContext);
   // State to control visibility of the popup
   const [showConsent, setShowConsent] = useState(false);
 
@@ -58,8 +60,8 @@ const CookieConsent = ({ cookiePolicyUrl = "/cookie-policy" }) => {
     localStorage.setItem("cookieConsentGiven", "true");
     setShowConsent(false);
 
-    // Here you would implement actual cookie management based on preferences
-    console.log("Cookie preferences saved:", preferences);
+    // Implement actual cookie management based on preferences
+    // console.log("Cookie preferences saved:", preferences);
   };
 
   // Accept all cookies
@@ -75,7 +77,7 @@ const CookieConsent = ({ cookiePolicyUrl = "/cookie-policy" }) => {
     localStorage.setItem("cookieConsentGiven", "true");
     setShowConsent(false);
 
-    console.log("All cookies accepted");
+    //console.log("All cookies accepted");
   };
 
   // Reject all optional cookies
@@ -91,18 +93,18 @@ const CookieConsent = ({ cookiePolicyUrl = "/cookie-policy" }) => {
     localStorage.setItem("cookieConsentGiven", "true");
     setShowConsent(false);
 
-    console.log("All optional cookies rejected");
+    //console.log("All optional cookies rejected");
   };
 
   if (!showConsent) return null;
 
   return (
     <Layer
-      position="bottom"
+      position="center"
       modal={false}
       margin={{ vertical: "medium", horizontal: "large" }}
-      responsive={true}
       animation="slide"
+      background="transparent"
     >
       <Box
         pad="medium"
@@ -166,9 +168,9 @@ const CookieConsent = ({ cookiePolicyUrl = "/cookie-policy" }) => {
         </Box>
 
         <Box
-          direction="row"
-          gap="small"
-          justify="end"
+          direction={size !== "small" ? "row" : "column"}
+          gap={size !== "small" ? "small" : "medium"}
+          justify={size !== "small" ? "end" : "center"}
           wrap
           margin={{ top: "medium" }}
         >
