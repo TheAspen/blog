@@ -12,6 +12,7 @@ import { Link } from "gatsby";
 import { navigate } from "gatsby";
 
 const privacyPage = "/privacy-policies/";
+const termsOfServicePage = "/terms-of-service/";
 
 const aboutPage = "/about/";
 const homePage = "/";
@@ -111,14 +112,29 @@ const Footer: React.FC = () => {
 	Press kit
 	</Text>
 	</a> */}
-        <Link
-          style={{ alignSelf: "center", color: "white", fontSize: "16px" }}
-          to={privacyPage}
-        >
-          <Text textAlign="center" size="small">
-            Privacy policy
-          </Text>
-        </Link>
+        <Box direction="row">
+          <Link
+            style={{
+              alignSelf: "center",
+              color: "white",
+              fontSize: "16px",
+              marginRight: "15px",
+            }}
+            to={privacyPage}
+          >
+            <Text textAlign="center" size="small">
+              Privacy policy
+            </Text>
+          </Link>
+          <Link
+            style={{ alignSelf: "center", color: "white", fontSize: "16px" }}
+            to={termsOfServicePage}
+          >
+            <Text textAlign="center" size="small">
+              Terms of Use
+            </Text>
+          </Link>
+        </Box>
       </Gr_Footer>
     </Box>
   );
