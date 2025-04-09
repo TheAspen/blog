@@ -69,7 +69,7 @@ const BlogPostCard = ({
   return (
     <Box
       //background="#00488c"
-      background="#013c73"
+      background="#212350"
       border={{ color: "#05eefa", size: "2px" }}
       pad="small"
       round

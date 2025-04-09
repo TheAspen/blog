@@ -23,6 +23,8 @@ import CookieConsent from "./CookieConsest";
 const blogPage = "/posts/";
 const aboutPage = "/about/";
 const introductionPost = "/posts/2/";
+const toSteam = "https://store.steampowered.com/app/3552750/Enfora_Star/";
+const steamIcon = "/images/steam.png";
 
 const introduction = `Greetings, and welcome to read my game development devlog. On this website, I will publish development logs of how my game project is ongoing.`;
 const introduction2 = `For now, this devlog only focuses on a top-down shooter called Enfora Star, but more about the project is on the devlog page!`;
@@ -102,11 +104,25 @@ const App: React.FC = () => {
                         against enemy waves.
                       </Text>
                     </Box>
-                    <Button
-                      onClick={() => navigate(introductionPost)}
-                      label="Project introduction"
-                      size="large"
-                    />
+                    <Box direction="row" gap="small">
+                      <Button
+                        onClick={() => navigate(introductionPost)}
+                        label="Project introduction"
+                        size="large"
+                      />
+                      <Button
+                        onClick={() => navigate(toSteam)}
+                        label="Steam"
+                        size="large"
+                        icon={
+                          <img
+                            src={steamIcon}
+                            alt="Steam"
+                            style={{ width: "40px", height: "40px" }}
+                          />
+                        }
+                      />
+                    </Box>
                   </Box>
                 </Box>
                 <Grid
