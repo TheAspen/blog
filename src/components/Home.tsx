@@ -104,7 +104,10 @@ const App: React.FC = () => {
                         against enemy waves.
                       </Text>
                     </Box>
-                    <Box direction="row" gap="small">
+                    <Box
+                      direction={size === "small" ? "column" : "row"}
+                      gap="small"
+                    >
                       <Button
                         onClick={() => navigate(introductionPost)}
                         label="Project introduction"
