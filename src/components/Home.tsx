@@ -84,24 +84,26 @@ const App: React.FC = () => {
                     justify="center"
                     gap="small"
                     background={{
-                      image: "url(/images/header_new.png)",
+                      image: "url(/images/header_final.png)",
                       opacity: "strong",
                     }}
                     pad="medium"
                   >
                     <Image
-                      style={{ maxWidth: "inherit" }}
-                      src="/images/enfora_star_text.png"
+                      style={{
+                        maxWidth: size === "small" ? "inherit" : "800px",
+                      }}
+                      src="/images/enfora_star_text2.png"
                     ></Image>
                     <Box
                       round
                       pad="small"
-                      background={{ color: "dark-1", opacity: "medium" }}
+                      background={{ color: "dark-1", opacity: "strong" }}
                     >
                       <Text weight="bold" size="xlarge" textAlign="center">
-                        Enfora Star is an arcade-like top-down shooter. Collect
-                        new weapons or upgrade existing ones to fight better
-                        against enemy waves.
+                        Enfora Star is a space defender shoot-'em-up. Collect
+                        new weapons, upgrade existing ones, or build defenses to
+                        fight against enemy droid waves!
                       </Text>
                     </Box>
                     <Box
@@ -113,18 +115,30 @@ const App: React.FC = () => {
                         label="Project introduction"
                         size="large"
                       />
-                      <Button
-                        onClick={() => navigate(toSteam)}
-                        label="Steam"
-                        size="large"
-                        icon={
-                          <img
-                            src={steamIcon}
-                            alt="Steam"
-                            style={{ width: "40px", height: "40px" }}
-                          />
-                        }
-                      />
+                      <Box style={{ position: "relative" }}>
+                        <Button
+                          onClick={() => navigate(toSteam)}
+                          label="Steam"
+                          size="large"
+                          icon={
+                            <img
+                              src={steamIcon}
+                              alt="Steam"
+                              style={{ width: "40px", height: "40px" }}
+                            />
+                          }
+                        />
+                        <Image
+                          style={{
+                            position: "absolute",
+                            top: size === "small" ? "-22px" : "-45px",
+                            right: size === "small" ? "-20px" : "-90px",
+                            maxWidth: size === "small" ? "120px" : "200px",
+                            pointerEvents: "none",
+                          }}
+                          src="/images/released-shadows.png"
+                        />
+                      </Box>
                     </Box>
                   </Box>
                 </Box>
