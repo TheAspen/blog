@@ -105,7 +105,7 @@ const Footer: React.FC = () => {
         role="none"
       >
         <Text textAlign="center" size="small">
-          © 2025 Teemu Miettinen
+          © 2026 Teemu Miettinen
         </Text>
         {/* <a href="/presskit/Info.txt" download>
 	<Text textAlign="center" size="small">
