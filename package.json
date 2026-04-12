@@ -1,6 +1,6 @@
 {
   "name": "blog",
-  "version": "1.4.23",
+  "version": "1.4.24",
   "private": true,
   "description": "blog",
   "author": "Teemu Miettinen",
@@ -45,7 +45,6 @@
     "typescript": "^5.1.6"
   },
   "overrides": {
-    "webpack-dev-middleware": "5.3.4",
-    "axios": "0.28.0"
+    "webpack-dev-middleware": "5.3.4"
   }
 }
